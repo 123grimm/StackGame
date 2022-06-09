@@ -21,8 +21,10 @@ public class Var {
 	static Label lbl;
 	static boolean a, b;
 	static int grenzeOben = 385, grenzeUnten = 425;
+	static int grenzeLinks= 0;
+	static int grenzeRechts= 800;
 	
-	//Variablen für TitleScreen
+	//Variablen fÃ¼r TitleScreen
 	//Erkennung des Aktiven Bildschirms
 	static int gameActive = 0;
 	static String titleTxt = "StackGame", subtitle = "Programmed by: Marius, Matias, Thomas...", start = "Start Game", close = "Close Game", setting = "Settings";
@@ -35,6 +37,7 @@ public class Var {
 	static BufferedImage ib1;
 	static BufferedImage ib2;
 	static BufferedImage iplayer;
+	static BufferedImage iplf1;
 
 	public Var() {
 		
@@ -44,6 +47,8 @@ public class Var {
 			ib2 = ImageIO.read(new File("rsc/b3.png"));
 			//Spieler
 			iplayer = ImageIO.read(new File("rsc/player.png"));
+			//Platform
+			iplf1 = ImageIO.read(new File("rsc/plf1.png"));
 		}catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Bilder konnten nicht geladen werden");
